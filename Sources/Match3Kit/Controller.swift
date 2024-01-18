@@ -191,6 +191,7 @@ public final class Controller<Filling: GridFilling, GeneratorType: Generator<Fil
     }
 
     public func match(indices: Set<Index>, swapIndices: Set<Index>, refill: Refill) -> MatchResult<Filling> {
+        print("match indices: \(indices)")
         var spawnCells = [Index: Grid<Filling>.Cell]()
         var removeIndices = indices
         for bonuse in bonuse {
